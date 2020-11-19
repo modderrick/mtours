@@ -36,11 +36,17 @@ export class TourComponent implements OnInit {
 	public config1: SwiperOptions = {
 		a11y: { enabled: true },
 		direction: 'horizontal',
-		slidesPerView: 3,
+		slidesPerView: 1,
+		//slidesOffsetAfter:30,
+		//slidesOffsetBefore:40,
+		speed:600,
+		freeMode: true,
+		freeModeMomentum: true,
+		freeModeMomentumVelocityRatio:2,
 		keyboard: false,
 		mousewheel: false,
 		scrollbar: false,
-		spaceBetween: 30,
+		spaceBetween: 10,
 		navigation: {
 		nextEl: '.next-1',
 		prevEl: '.prev-1'
@@ -50,6 +56,16 @@ export class TourComponent implements OnInit {
 		},
 		loop: true,
 		pagination: false,
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 5,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 10,
+			}
+		}
 	};
 
 	public config0: SwiperOptions ={
@@ -60,7 +76,7 @@ export class TourComponent implements OnInit {
 		slidesOffsetBefore: 0,
 		freeMode: true,
 		freeModeMomentum: true,
-		slidesPerView: 2,
+		slidesPerView: 1,
 		keyboard: false,
 		mousewheel: false,
 		scrollbar: false,
@@ -71,6 +87,12 @@ export class TourComponent implements OnInit {
 		},
 		autoplay: {
 		disableOnInteraction: false
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 5,
+			},
 		}
 	};
 

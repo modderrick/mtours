@@ -5,191 +5,229 @@
     background-attachment: scroll;
     background-repeat: no-repeat;
     color: $color-white;
-  
-}
-.tour-content{
-    padding: 15% 40px 40px 40px;
 
-    background: rgb(0,0,0);
-background: linear-gradient(0deg, rgba(0,0,0,1) 79%, rgba(0,0,0,0.15730042016806722) 100%);
-    & >h1{
-        padding-left: 40px;
-        padding-bottom: 40px;
-    }
-
-.tour-wrapper{
-    display: flex;
-
-
-   
-    & > .left-content{  
-        color: $color-white;
-        width: 60%;
-        & > div{
-            padding-bottom: $size-20px;
-            mat-card{
-                padding: 0px;
-                border-radius: 20px;
-                outline: none;
-                margin-bottom: 20px;
-                img{
-                    border-radius: 20px;
-                    margin: 0px;
-                }          
-            } 
-            & > h5{
-                font-weight: bold;
-                color: $color-black-light-1;
-            }
-            & > h1{
-                font-size: $size-2rem;
-                font-weight: 900;
-            }
-            & >p{
-                font-weight: 200;
-                line-height: $size-2rem;
-                font-size: $size-18px;
+    .section-content{
+        padding: 10% 0px 0px;
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,1) 79%, rgba(0,0,0,0.15730042016806722) 100%);
+        .container{
+            border: $test-border;
+        }
+        .section-header{
+            p{
+                text-transform: uppercase;
+                color: $color-white;
+                font-weight: 600;
+                font-size: $size-1-5rem;
             }
         }
-    } 
-   
-    .right-content{
-        display: $display-flex;
-        flex-direction: column;
-        width: 40%;
-        
-        margin-left: 30px;
-       
+        .content-container{
+            .right-content{
+                .content-data{
+                    .article-link{
+                        mat-card{
+                            padding: 0px;
+                            border-radius: 10px;
+                            outline: none;
+                            img{
+                                width: 100%;
+                                height: 250px;
+                                border-radius: 10px;
+                                margin: 0px;
+                            }          
+                        } 
 
-        .article-categories{
-            background-color: $color-white;
-            width: 100%;    
-            padding: 20px 20px;   
-            border-radius: $size-20px;  
-            margin-bottom: $size-20px;    
-            & > h3{
-                color: $color-black-light;
-                font-size: $size-1-5rem;
-                font-weight: bolder;
-            }    
-            ul{
-                color: $color-silver;
-                margin: 20px 30px;
-                padding: 0px;
-                list-style-type: none;
-                li{
-                    a{
+                        .article-card::after{
+                            position: absolute;
+                            content: "";
+                            top: 0px;
+                            left: 0px;
+                            z-index: 200;
+                            width: 100%;
+                            height: 250px;
+                            background-color: rgba(240, 72, 6, 0);
+                            border-radius: 10px;
+                            -webkit-transition: background-color 1s;
+                            -moz-transition: background-color 1s;
+                            -ms-transition: background-color 1s;
+                            -o-transition: background-color 1s;
+                            transition: background-color 1s;
+                        }
+                       
+                        .date{
+                            text-transform: uppercase;
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: $color-grey;
+                        }
+                        .title{
+                            font-size: $size-2rem;
+                            font-weight: 600;
+                            color: $color-white;
+                            -webkit-transition: color 1s;
+                            -moz-transition: color 1s;
+                            -ms-transition: color 1s;
+                            -o-transition: color 1s;
+                            transition: color 1s;
+                        }
+                       
+                           
+                        .desc{
+                            font-weight: 400;
+                            font-size: $size-16px;
+                            color: $color-white;
+                        }
+    
+                    }
+                    .article-link:hover{
+                        .article-card::after{
+                           
+                            background-color: rgba(240, 72, 6, 0.233);
+                          
+                        }
+                        .title{
+                            color: $color-orangered;
+                        
+                        }
+                    }
+                    
+    
+                }
+    
+            }
+            .side-content{
+                .article-categories{
+                    background-color: $color-white;
+                    width: 100%;    
+                    padding: 20px 20px;   
+                    border-radius: $size-20px;  
+                    margin-bottom: $size-20px;    
+                    & > h3{
+                        color: $color-black-light;
+                        font-size: $size-1-5rem;
+                        font-weight: bolder;
+                    }    
+                    ul{
                         color: $color-silver;
-                        text-decoration: none;
-                        text-transform: capitalize;
-                        font-weight: $size-2rem;
-                        font-weight: bold;
-                        padding: $size-10px 0px;
-                        display:$display-block;
-                    }
-                }
-                li:not(:last-child){
-                    border-bottom: $border-light-1;
-                }
-
-               
-            }
-        }
-
-        .latest-tours{
-            background-color: $color-white;
-            width: 100%;    
-            padding: 20px 20px;   
-            border-radius: $size-20px;   
-            margin-bottom: $size-20px;         
-            & > h3{
-                color: $color-black-light;
-                font-size: $size-1-5rem;
-                font-weight: bolder;
-            }
-            & > mat-card{
-                display: $display-flex;
-                padding: 0px;
-                margin-top: 20px;
-                img{
-                    width: 100px;
-                    height: 100px;
-                    border-radius: 20px;
-                }
-                mat-card-content{
-                    margin-left: 20px;
-                    & > div{
-                        border: $test-border;
-                        display: $display-flex;
-                        flex-direction: column;
-                        align-self: flex-start;
-                        h3{
-                            border: $test-border;
-                            line-height: $size-1-5rem;
-                            margin: 0px;
-                        }
-                        & > h3{
-                            font-weight: bold;
-                            color: $color-black-light;
-                        }
-                        & > div:nth-child(2){
-                            display: $display-flex;
-                            padding-top: 8px;
-                            h3{
+                        margin: 20px 30px;
+                        padding: 0px;
+                        list-style-type: none;
+                        li{
+                            a{
                                 color: $color-silver;
-                            }
-                            & > h3:first-child{
-                                color: $color-orangered;
+                                text-decoration: none;
+                                text-transform: capitalize;
+                                font-weight: $size-2rem;
                                 font-weight: bold;
-                                margin-right: $size-10px;
-                            }
-                            & > h3:last-child{
-                                text-decoration: line-through;
+                                padding: $size-10px 0px;
+                                display:$display-block;
                             }
                         }
-                        & > div:nth-child(3){
-                            display: $display-flex;
-                            padding-top: 8px;
-                            h3{
-                                color: $color-silver;
-                                margin-left: 4px;
-                            }
-                        }
+                        li:not(:last-child){
+                            border-bottom: $border-light-1;
+                        }  
                     }
                 }
-               
-            }
-        }
-        .question{
-            width: 100%;
-            color: white;
-            background-color: $color-orangered;
-            padding: 20px 20px;   
-            border-radius: $size-20px; 
-            margin-bottom: $size-20px;  
         
-            & >h3{
-                font-size: $size-1-5rem;
-                line-height: $size-1-5rem;
-                color: #fff;
-                font-size: $size-1-5rem;
-                font-weight: bolder;
-
+                .latest-tours{
+                    background-color: $color-white;
+                    width: 100%;    
+                    padding-top: 20px;   
+                    padding-bottom: 20px; 
+                    border-radius: $size-20px;          
+                    & > p{
+                        color: $color-black-light;
+                        font-size: $size-1-5rem;
+                        font-weight: bolder;
+                    }
+                    & > mat-card{
+                        display: $display-flex;
+                        padding: 0px;
+                        margin-top: 20px;
+                        border-radius: 10px;
+                        img{
+                            width: 100%;
+                            height: 80px;
+                            border-radius: 10px;
+                            @include media-breakpoint-up(md){
+                                height: 150px;
+                            }
+                            @include media-breakpoint-up(lg){
+                                height: 100px;
+                            }
+                        }
+                        .tour-info{  
+                            &>p:first-child{
+                                border: $test-border;
+                                // line-height: $size-1-5rem;
+                                // margin: 0px;
+                                font-size: 18px;
+                                color: $color-black-light;
+                                font-weight: 500;
+                            }
+                            
+                            & > p:nth-child(2){
+                                //background-color: red;
+                                //word-wrap: break-word;
+                                & > span:first-child{
+                                    color: $color-orangered;
+                                    font-size: 20px;
+                                    font-weight: bold;
+                                    
+                                }
+                                & > span:last-child{
+                                    font-size: 18px;
+                                    color: $color-grey;
+                                    text-decoration: line-through;
+                                }   
+                            }
+                            & > p:nth-child(3){
+                                color: $color-silver;
+                                & > span:first-child{
+                                    i{
+                                        color: $color-black-light;
+                                        font-size: 20px;
+                                    }
+                                }
+                                & > span:last-child{
+                                    font-size: 20px;
+                                    color: $color-grey;
+                                }   
+                            }
+                            
+                        }
+                       
+                    }
+                }
+                .question{
+                    width: 100%;
+                    color: white;
+                    background-color: $color-orangered;
+                    padding: 20px 20px;   
+                    border-radius: $size-20px; 
+                    margin-bottom: $size-20px;  
+                
+                    & >h3{
+                        font-size: $size-1-5rem;
+                        line-height: $size-1-5rem;
+                        color: #fff;
+                        font-size: $size-1-5rem;
+                        font-weight: bolder;
+        
+                    }
+                    & > p{
+                        font-size: $size-18px;
+                        font-weight: 500;
+                        margin: 20px 0px;
+                        line-height: $size-1-5rem;
+                    }
+                    & >h1{
+                        font-size: $size-2rem;
+                        margin-bottom: 60px;
+                    }             
+                }
             }
-            & > p{
-                font-size: $size-18px;
-                font-weight: 500;
-                margin: 20px 0px;
-                line-height: $size-1-5rem;
-            }
-            & >h1{
-                font-size: $size-2rem;
-                margin-bottom: 60px;
-            }
-           
         }
-
-
-    }         
-}
+    }
+  
 }

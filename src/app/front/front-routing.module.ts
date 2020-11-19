@@ -9,19 +9,21 @@ import { BlogPageComponent } from './blog-page/blog-page.component';
 import { BlogArticleComponent } from './blog-article/blog-article.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { DestinationComponent } from './destination/destination.component';
 
 const routes: Routes = [
 
 	{ path: '',
 		component: FrontComponent,
 		children:[
-			{ path: 'index', component: IndexComponent},
-			{ path: 'tour', component: TourComponent},
+			{ path: 'home', component: IndexComponent },
+			{ path: 'tour', component: TourComponent },
 			{ path: 'tours', component: ToursComponent },
-			{ path: 'blog-page', component: BlogPageComponent},
-			{ path: 'blog-article', component: BlogArticleComponent},
-			{ path: 'about', component: AboutComponent},
-			{ path: 'contact', component: ContactComponent}
+			{ path: 'destinations', component: DestinationComponent },
+			{ path: 'blog', component: BlogPageComponent },
+			{ path: 'blog-article', component: BlogArticleComponent },
+			{ path: 'about', component: AboutComponent },
+			{ path: 'contact', component: ContactComponent }
 		] 
 	},
 ];

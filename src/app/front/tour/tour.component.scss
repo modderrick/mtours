@@ -1,536 +1,397 @@
 @import "../../../global-scss.scss";
 
-.tour-overview{
-    background-image: url(../../../assets/images/sea_1.jpg);
-    background-attachment: scroll;
-    background-size: cover;  
+.sticky-btn{
+    border: $test-border;
+    position: sticky;
+    bottom: 0px;
+    z-index: 500;
+    padding: 1px 20px;
+    background-color: rgb(19, 17, 17);
+    button{
+        background-color: $color-orangered;color: $color-white;
+        font-size: 25px;
+    }
+}
+.tour-overview{   
    
-   
-    .tour-overview-overlay{
-        background: rgb(0,0,0);
-        background: linear-gradient(0deg, rgba(0,0,0,1) 50%, rgba(0,0,0,0.16850490196078427) 100%);
-     
-        color: $color-white;
-        padding-bottom: 0%;
-        .section-header{
-            display: flex;
-            margin: 2% 70px 20px 70px;
-            margin-bottom: 5%;
-            border: $test-border;
-            color: $color-white;
-            .sub-header-1{
-                border:$test-border;
-                width: 50%;
-                h1{
-                    text-transform: uppercase;               
-                    font-weight: bold;                
-                }
-                h2{            
-                    
-                    
-                    margin: 0px;
-                } 
-                }
-            .sub-header-2{
-                border:$test-border;  
-                align-self: flex-end;
-                .action-btn{
-                color: $color-white;     
-                margin-right: 20px;
-                border-radius: $border-r-px-20;
+    .col{
+        border: $test-border;
+    }
+    .top-wrapper{
+        background-image: url(../../../assets/images/sea_1.jpg);
+        background-attachment: scroll;
+        background-size: cover;  
+        .top-overlay{
+            background: rgb(11,11,11);
+            background: linear-gradient(0deg, rgba(11,11,11,1) 21%, rgba(10,9,9,0.7496506590280474) 50%, rgba(12,12,12,0.18753885778581136) 88%);
+            .section-header{
+                padding-top: 20%;
+                color: $color-white;
+            }
+            button{
+                color: $color-white;
+                border-color: $color-white;
                 outline: none;
-                padding: 6px 50px;
-                font-size: medium;
-                background-color: $color-orange-bright;
-                }
+            }
+            .btn-booking{
+                background-color: $color-orangered;
                 
-                .next-1{       
-                    border: 2px solid $color-white-blure;      
-                    border-radius: 50%;
-                    display: inline-block;
-                    height: 50px;
-                    width: 50px;
-                    padding: 8px;
-                    outline: none;        
-                }
-                .prev-1{
-                    border: 2px solid $color-white-blure;
-                    border-radius: 50%;
-                    height: 50px;
-                    width: 50px;
-                    text-align: center;
-                    margin: 0px 30px;
-                    outline: none;
-                }
+            }
+            button:hover{
+                border-color: rgb(255, 115, 0);
             }
         }
-        .section-content{
-            .swiper-container{
-                height: auto;
-                mat-card{
-                    padding: 0px;
-                    border-radius: 20px;
-            
-                    outline: none;
-                    img{
-                        border-radius: 20px;
-                        margin: 0px;
-                    }          
-                }
-                .card-overlay{
-                    border-radius: 20px;
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    top: 0px;
-                    padding: 30px 50px;  
-                    display: $display-flex;
-                    flex-direction: column;
-                    background-color: #00000062;
-                    
-                    .overlay-body{
-                        flex-grow: 1;
-                        .rating{
-                            margin-bottom: 16px;
-                            .reviews{
-                                margin-left: 4px;
-                                font-size: medium;
-                            }
-                        }
-                        .overlay-title{
-                            font-size: 2.5em;
-                            font-weight: bolder;
-                            
-                            margin-bottom: 16px;
-                        }
-                        .overlay-text{
-                            width: 80%;
-                            color: $color-white-blure-2;
-                            font-size: 1.5em;
-                            font-style: italic;
-                            line-height: 1.5em;
-                        }
-                    }  
-                    .overlay-footer{
-                        color: $color-white-blure-2;
-                        .icon-text{
-                            margin-bottom: 50px;
-                            font-size: 1.5em;
-                            margin-left: 4px;
-                        }
-                    }           
-                }         
+    } 
+    .section-slider{
+        mat-card{
+            border-radius: 10px;
+            img{
+                border-radius: 10px;
+                width: 100%;
+                height: 180px;
             }
-            .tour-location{
-                display: flex;
-                padding: 30px;
-                .site-info{
-                        font-size: $size-18px;
-                        line-height: 1.5em;
-                        color: silver;
-                        width: 65%;
+        }
+       
+    } 
+    .section-content{
+        .section-details{
+            .tour-details{
+                .details-header{
+                    font-weight: 500;
+                    border: $test-border;
+                    color: $color-black-light;       
+                    font-size: $size-1-5rem;
                 }
-                .site-map{
-                    width: 35%;
-                    mat-card{
-                        border-radius: 30px;
-                        padding: 0px;
-                        z-index: 0;
+            }
+
+            .tour-insight{ 
+                border-bottom: $border-light;
+                .insight-header{
+                    font-weight: 500;
+                    border: $test-border;
+                    color: $color-black-light;       
+                    font-size: $size-1-5rem;
+                }
+               
+                .insight-list{
+                    div{
+                        width: 50%;
+                        font-size: $size-18px;
+                        color: $color-silver;
+                        padding: .5rem 0px;
+                        mat-icon{
+                            color: $color-orangered;
+                            font-size: $size-20px;
+                            font-weight: bolder;
+                        }
+                    }
+                }
+            }
+            .tour-program{
+                .program-header{
+                    font-weight: 500;
+                    border: $test-border;
+                    color: $color-black-light;       
+                    font-size: $size-1-5rem;
+                }
+                mat-accordion{     
+                    .col{
+                        border: $test-border;
+                    }      
+                    mat-expansion-panel-header{
+                        border: $test-border;
+                        font-size: $size-1rem;
+                        font-weight: 500;
+                        color: $color-black-light;
+                        @include media-breakpoint-up(md){
+                            font-size: $size-1-5rem;
+                        }
+                        mat-panel-title{
+                            color: inherit;
+                            
+                        }
+                        mat-panel-description{
+                           p{
+                                display: -webkit-box;
+                                overflow: hidden;
+                                -webkit-line-clamp: 1;
+                                -webkit-box-orient: vertical;
+                           }
+                        }    
+                    }              
+                }
+            }
+
+            .tour-inclusions{
+               margin-top: $size-2rem;
+               .inclusion-header{
+                    font-size: $size-1-5rem;
+                    color: $color-black-light;
+                    font-weight: 500;
+                }
+              
+               .fa-check-circle{
+                   color: $color-orange-bright;
+               }
+              
+               .inclusion-title{
+                   color: $color-black;
+                   font-size: $size-1rem;
+                   font-weight: 500;
+               }
+
+               .inclusion-content{
+                    border-bottom: 1px solid $color-black-light;
+                }
+            }
+
+            .tour-questions{
+                padding: $size-2rem 0px;
+                .question-header{
+                    font-size: $size-1-5rem;
+                    color: $color-black-light;
+                    font-weight: 500;
+                }
+                .question-title{
+                    font-size: $size-1-5rem;
+                    font-weight: bolder;
+                    color: $color-black-light;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    i{
+                        font-size: 30px;
+                        color: $color-orangered;
                         
                     }
                 }
+                
+            }
+            .related-tours{
+                color: $color-black-light;
+                .section-header{
+                   .related-title{
+                       font-size: $size-1-5rem;
+                       font-weight: 500;
+                       color: $color-black-light;
+                   }
+                   button{
+                       border-color: $color-black-light;
+                   }
+                }
+                .section-content{
+                    .swiper-container{
+                        height: auto;
+                        mat-card{
+                            position: relative;
+                            padding: 0px;
+                            border-radius: 10px;
+                        
+                            outline: none;
+                            img{
+                                border-radius: 10px;
+                                margin: 0px;
+                            }          
+                        
+                            .card-overlay{
+                                border: $test-border;
+                                border-radius: 10px;
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                top: 0px;
+                                background-color: #0000009a;
+                                color: $color-white;    
+                             
+                                .rating{
+                                    //margin-top: 5%;
+                                    .reviews{
+                                        margin-left: $size-1rem;
+                                        font-size: $size-1rem;
+                                    }
+                                }
+                                .overlay-title{
+                                    font-size: $size-1-5rem;
+                                    font-weight: bolder;
+                                    -webkit-transition: color 1s;
+                                    -moz-transition: color 1s;
+                                    -ms-transition: color 1s;
+                                    -o-transition: color 1s;
+                                    transition: color 1s;
+                                    
+                                }
+                                .overlay-text{
+                                    color: $color-white-blure-2;
+                                    font-size: $size-1rem;
+                                    font-style: italic;
+                                    display: -webkit-box;
+                                    overflow: hidden;
+                                    -webkit-line-clamp:3;
+                                    -webkit-box-orient: vertical;
+                              
+                                }
+                                
+                                .overlay-footer{
+                                    color: $color-white-blure-2;
+                                   
+                                    & i{
+                                      
+                                        margin-right: .5rem;
+                                       
+                                    }
+                                    & span{
+                                        font-size: 1rem;
+                                     
+                                    }
+                                }           
+                            }   
+                        }
+                        mat-card:hover{
+                            .overlay-title{
+                                color: $color-orangered;
+                            }
+                        }
+                    }
+                }
+            }
+            .tour-form-review{
+                border-top: $border-light;
+                padding: $size-1-5rem 0px;
+                border-top: $border-light;
+                .review-title{
+                    font-size: $size-1-5rem;
+                    font-weight: 500;
+                    color: $color-black-light
+                }
+                mat-form-field{
+                    width: 100%;
+                    border: 1px solid $color-black;
+                    padding: 0px;
+                    margin: 0px;
+                
+                }
+                .submit-btn{
+                    background-color: $color-orangered;
+                    color: $color-white;
+                }
+            }
+            .tour-reviews{
+                border: $test-border;
+                .review-content{
+                    div:not(:last-child){
+                        border-bottom: 1px solid #000;
+                    }
+                    
+
+                }
+                .review-number{
+                    font-size: $size-1rem;
+                    color: $color-black-light;
+                }
+                .reviewer-name{
+                    color: $color-black-light;
+                    font-size: $size-1rem;
+                    font-weight: 800;
+                }
+                .reviewer-type{
+                    color: $color-grey;
+                    font-weight: bolder;
+                }
+                .reviewer-comment{
+                    color: $color-grey;
+                }
+                .review-date{
+                    color: $color-grey;
+                    font-style: italic;
+                }
+            
+              
             }
         }
     }
 }
 
-.tour-details{
-    display: flex;
-    border: $test-border;
-    padding-bottom: 30px;
-    .tour-main-details{
-        width: 65%;
-        padding: 30px;
-        border: $test-border;    
-        display: flex;
-        flex-direction: column;
-        .tour-insight{
-            padding: $size-2rem 0px;
-            border-bottom: $border-light;
-            h3:first-of-type{
-                color: $color-black-light;
-                font-size: $size-1rem;
-                font-weight: bold;
-            }
-            & > div{
-                display: $display-flex;
-                flex-wrap: wrap;
-                div{
-                    width: 50%;
-                    font-size: $size-18px;
-                    color: $color-silver;
-                    padding: .5rem 0px;
-                    mat-icon{
-                        color: $color-orangered;
-                        font-size: $size-20px;
-                        font-weight: bolder;
-                    }
-                }
-            }
-        }
-        .tour-program{
-            padding: $size-2rem 0px;
-            & h1:first-of-type{
-                font-weight: bolder;
-                border: $test-border;
-                color: $color-black-light;       
-                font-size: $size-2-5rem;
-            }
-            mat-accordion{           
-                mat-expansion-panel-header{
-                    padding: 50px 20px;
-                    border: $test-border;
-                    font-weight: 800px;                  
-                    mat-panel-title{
-                        border: $test-border;
-                        img{
-                            margin-right: 10px;
-                        }
-                        h2{
-                            font-weight: 900;
-                        }
-                    }
-                    mat-panel-description{
-                        border: $test-border;
-                        width: 20%;
-                        text-align: left;                      
-                        h2{
-                            font-weight: 900;
-                            text-align: left;
-                        }                       
-                    }
-                }              
-            }
-        }
-        .tour-inclusions{
-            padding: $size-2rem 0px;
-            & h1{
-                font-weight: bolder;
-                font-size: $size-2-5rem;
-            }
-            & > div{
-                display: $display-flex;
-                flex-wrap: wrap;
-                & > div{
-                    width: 50%;
-                    display: $display-flex;
-                    padding: 2.5rem 0rem;
-                    border-bottom: $border-light;
-                    & > mat-icon{
-                        align-self: center;
-                        margin-right: 2.5rem;
-                        font-size: 2.5rem;
-                        color: $color-orangered;                       
-                    }                   
-                }
-            }
-        }
-        .tour-questions{
-            padding: $size-2rem 0px;
-            & h1:first-of-type{
-                font-size: $size-2-5rem;
-                font-weight: bolder;
-            }
-            & p{
-                font-size: $size-18px;
-                margin-bottom: $size-2rem;
-            }
-            & mat-accordion{
-                margin-top: $size-4rem;
-
-                & mat-expansion-panel{
-                    box-shadow: none; 
-                    margin-bottom: $size-1-5rem;                    
-                    & mat-expansion-panel-header{
-                        padding: $size-2-5rem;
-                        background-color: #deb0b0;   
-                        & mat-panel-title{
-                            & > div{
-                                display: $display-flex;
-                                & mat-icon{                                  
-                                    align-self: center;
-                                    margin-right: $size-1rem;
-                                    font-size: $size-2rem;
-                                    color: $color-orangered;
-                                }
-                            }
-                        }  
-                    }
-                }
-            }
-        }
-        .related-tours{
-            color: $color-black-light;
-            padding: $size-2rem 0px;
-            border-top: $border-light;
-            .section-header{
-                display: flex;
-                margin: 0 0 $size-1rem 0;
-                border: $test-border;
-                .sub-header-1{
-                    border:$test-border;                 
-                    h3{
-                        text-transform: uppercase;               
-                        font-weight: bold;
-                        color: $color-orange-bright;                  
-                    }
-                    h1{                                
-                        font-size: $size-2-5rem;
-                        font-weight: bolder;
-                    } 
-                }
-                .sub-header-2{
-                    border:$test-border;
-                    color: $color-black-light;
-        
-                    button{
-                        border-radius: $border-r-px-20;
-                        border: 2px solid $color-white-blure;
-                        outline: none;
-                        padding: 6px 20px;
-                        font-size: medium;
-                        border: $border-light;
-                    }
-                    .next-3{                     
-                        border-radius: 50%;
-                        display: inline-block;
-                        height: 50px;
-                        width: 50px;
-                        padding: 8px;
-                        outline: none;        
-                    }
-                    .prev-3{
-                        border-radius: 50%;
-                        height: 50px;
-                        width: 50px;
-                        text-align: center;
-                        margin: 0px 20px;
-                        outline: none;
-                    }
-                }
-            }
-            .section-content{
-                .swiper-container{
-                    height: auto;
-                    mat-card{
-                        padding: 0px;
-                        border-radius: 20px;
-                       
-                        outline: none;
-                        img{
-                            border-radius: 20px;
-                            margin: 0px;
-                        }          
-                    }
-                    .card-overlay{
-                        border-radius: 20px;
-                        width: 100%;
-                        height: 100%;
-                        position: absolute;
-                        top: 0px;
-                        padding: 20px 10px;  
-                        display: $display-flex;
-                        flex-direction: column;
-                        background-color: #0000009a;
-                        color: $color-white;
-                        
-                        .overlay-body{
-                            flex-grow: 1;
-                            .rating{
-                                margin-bottom: 16px;
-                                .reviews{
-                                    margin-left: $size-1rem;
-                                    font-size: $size-1rem;
-                                }
-                            }
-                            .overlay-title{
-                                font-size: $size-1-5rem;
-                                font-weight: bolder;
-                                line-height: $size-2rem;
-                                
-                            }
-                            .overlay-text{
-                                width: 100%;
-                                color: $color-white-blure-2;
-                                font-size: 1.5em;
-                                font-style: italic;
-                                line-height: 1.5em;
-                            }
-                        }  
-                        .overlay-footer{
-                            color: $color-white-blure-2;
-                            display: $display-flex;
-                            & mat-icon{
-                                font-size: 2rem;
-                                margin-right: $size-1rem;
-                                align-self: center;
-                            }
-                            & span{
-                                font-size: 1.5em;
-                                align-self: center;
-                            }
-                        }           
-                    }         
-                }
-            }
-        }
-        .tour-form-review{
-            border-top: $border-light;
-            padding: $size-2rem 0px;
-            & h1{
-                font-size: $size-2rem;
-                font-weight: bolder;
-            }
-            & form > div{
-                display: $display-flex;
-                flex-direction: column;
-                & > div{
-                    display: $display-flex;
-                    border: $test-border;
-                    & > div{                      
-                        border: $test-border;
-                    }
-                    & >div:last-child{
-                        & button{
-                            padding: 6px $size-4rem;
-                            font-size: $size-1rem;
-                            margin: 0px;
-                        }
-                       
-                    }
-                    & > div:first-child{
-                        align-self: center;
-                        & span{
-                            font-size: 2rem;
-                        }
-                    }
-
-                }
-            }
-        }
-        .tour-reviews{
-            border: $test-border;
-            padding: $size-2rem 0px;
-            border-top: $border-light;
-            & > div:first-child{
-                display: flex;
-                padding: $size-2rem 0px;
-                h2{
-                    font-size: $size-1-5rem;
-                    font-weight: bold;
-                    color: $color-black-light;
-                }
-                div{
-                    align-self: center;
-                    margin-left: $size-1rem;
-                    span{
-                        font-size: $size-2rem;
-                    }
-                }
-            }
-            & > div {
-                border: $test-border;
-                display: $display-flex; 
-                & > div:first-child{
-                    margin-right: $size-1rem;
-                    border: $test-border;
-                    padding-top: $size-1rem;
-                }  
-                & > div:last-child{
-                    border-bottom: $border-light;
-                    div{
-                        margin-bottom: $size-1-5rem;
-                        font-size: $size-1rem;
-                       
-                        h2{
-                            margin: 0px;
-                            font-size: $size-1rem;
-                            color: $color-black-light;
-                        }
-                        h3{
-                            line-height: .5rem;
-                            margin-top: 0px;
-                            font-weight: bold;
-                            color: $color-silver;
-                        }
-                    }
-                } 
-            }
-        }
-    }
-    
     .tour-side-details{
-        padding: 20px 20px;
-        width: 35%;
-        border: $test-border;
         position: sticky;
         top: 0px;
-        right: 0px;
-        height: 90vh;
+        //right: 0px;
+        height: 98vh;
         mat-card{
             padding: 0px;
             border-radius: 20px 20px;
             img{
-                height: 220px;
+                height: 230px;
                 width: 100%;
                 border-radius: 20px 20px 0px 0px;
+               
             }
             .card-overlay{
                 background-color: rgba(0, 0, 0, 0.404);
                 position: absolute;
                 top: 0px;
-                width: 100%;
-                
+                width: 100%; 
                 border-radius: 20px 20px 0px 0px;
+                padding: 10px 10px;
             }
             mat-card-content{
-                padding: 5px $size-1-5rem;
-                & > div:first-child{
-                    border: $test-border;
-                    display: $display-flex;
-                    flex-direction: column;
-                    & > div{
-                        padding-top: 5px;
-                    }
-                    & >div:nth-child(3){
+                .tour-title{
+                    font-size: $size-1rem;
+                    color: $color-black-light;
+                    font-weight: 500;
+                    @include media-breakpoint-up(lg){
                         font-size: $size-1-5rem;
-                        font-weight: bold;
                     }
-                    & >div:nth-child(4){
-                        display: flex;
-                        mat-icon{
-                            align-self: center;
-                        }
-                    }
-                    & > div:nth-child(5){
-                        display: $display-flex;
-                        justify-content: center;
-                        color: $color-black-light;
-                        margin-bottom: 4px;
-                        & > div:first-child{
-                            font-size: $size-1-5rem;
-                            font-weight: bold;
-                            margin-right: 12px;
-                        }
-                        & > div:last-child{
-                            font-size: $size-1-5rem;
-                            text-decoration: line-through;
-                        }
-                    }
+                }
+                .tour-price{
+                    font-size: 20px;
+                    //color: $color-black-light;
+                }  
+                .discounted-price{
+                    color: $color-black-light;
+                }
+                .original-price{
+                    color: $color-grey;
+                    font-size: 18px;
+                    text-decoration: line-through;;
+                }
                 
+                .schedule{
+                    color: $color-black-light;
+                    .fa-clock{
+                        font-size: 20px;
+
+                    }
+                    span{
+                        font-size: 18px;
+                    }
+                }
+                button{
+                    background-color: $color-orangered;
+                    color: $color-white;
                 }
             }
         }
     }
+
+
+
+    .tour-location{
+        padding: 30px;
+        .site-info{
+                font-size: $size-18px;
+                line-height: 1.5em;
+                color: silver;
+                width: 65%;
+        }
+        .site-map{
+            width: 35%;
+            mat-card{
+                border-radius: 30px;
+                padding: 0px;
+                z-index: 0;
+                
+            }
+        }
+    }
     
-}

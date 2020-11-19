@@ -63,10 +63,11 @@ import { BlogPageComponent } from './blog-page/blog-page.component';
 import { BlogArticleComponent } from './blog-article/blog-article.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { DestinationComponent } from './destination/destination.component';
 
 
 @NgModule({
-  declarations: [FrontComponent, IndexComponent, TourComponent, ToursComponent, BlogPageComponent, BlogArticleComponent, AboutComponent, ContactComponent],
+  declarations: [FrontComponent, IndexComponent, TourComponent, ToursComponent, BlogPageComponent, BlogArticleComponent, AboutComponent, ContactComponent, DestinationComponent],
   imports: [
     CommonModule,
     FrontRoutingModule,

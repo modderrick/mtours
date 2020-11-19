@@ -1,0 +1,51 @@
+<section class="main-content">
+    <div class="section-content">
+        <div class="container">
+            <div class="section-header mb-4">
+                <p>Explore tours by destinations</p>
+                <p>destinations</p>
+            </div>
+            <div class="content-wrapper row"> 
+                <div class="col col-12 col-md-6 col-lg-4 mb-3" *ngFor="let slide of tourData3" >                   
+                    <mat-card >                       
+                        <img height="200px" width="100%"  src="../../assets/images/tour/tour_{{slide.id}}.jpeg" />  
+                        <mat-card-content>
+                            <div class="row destination-info">
+                                <div class="col col-12">
+                                    <p class="destination-title">Kampala</p>
+                                </div>
+                                <div class="col col-12 p-0">
+                                    <p class="destination-desc">
+                                        What to experience a clear raising sun, then spot is tfor you since you wont miss
+                                        even the a single light rays, watch as you enjoy the fun experience that comes packed
+                                        with other stuffs directly from us
+                                    </p>
+                                </div>
+                            </div> 
+                            <div class="container overlay">     
+                                <div class="row destination-overlay">
+                                    <div class="col col-5 mr-auto "> 
+                                        <img class="img-overlay"  src="../../assets/images/tour/tour_{{slide.id}}.jpeg" />  
+                                    </div>
+                                    <div class="col col-5 align-self-center">
+                                        <a class="btn-overlay btn btn-secondary btn-sm rounded-pill p-2"href="#">view details</a>
+                                    </div>
+                                </div>   
+                            </div>  
+                            <div class="matcard-action row">
+                                <div class="col col-5 pl-0 mr-auto align-self-center">
+                                    <span class="action-one">15 tours</span>
+                                </div>
+                                <div class="col col-6 pr-0 action-link align-self-center">
+                                    <a class="action-two" href="#">View all tours</a>
+                                </div>
+                            </div>                                           
+                        </mat-card-content>                                                                  
+                    </mat-card>                                        
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

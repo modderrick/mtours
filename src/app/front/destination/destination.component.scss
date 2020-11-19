@@ -1,0 +1,110 @@
+@import "../../../global-scss.scss";
+.main-content{
+    background-image: url(../../../assets/images/image_8.jpg);
+    background-size: cover;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    color: $color-white;
+
+
+    .section-content{
+        padding: 15% 0px 0px;
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,1) 79%, rgba(0,0,0,0.15730042016806722) 100%);
+       .section-header{
+           
+            &>p:first-child{
+                text-transform: uppercase;
+                color: $color-white;
+                font-weight: 600;
+                font-size: $size-1rem;
+            }
+            &>p:nth-child(2){
+                text-transform: capitalize;
+                font-weight: 600;
+                font-size: $size-2-5rem;
+            }
+        }
+        .content-wrapper{
+            //display: flex;
+           
+            .col{
+               
+                mat-card{
+                    background-color: $color-white;
+                    padding: 0px;
+                    border-radius: 20px;
+                    padding-bottom: 20px;
+                    outline: none;
+                    border: $test-border;
+                    position: relative;
+                    img{
+                        border-radius: 20px 20px 0px 0px;
+                        margin: 0px;
+                    }  
+                    mat-card-content{                
+                        padding: 35px 30px 0px 30px;
+                        // position: relative;
+                        .col{
+                            border: $test-border;
+                        }
+                        .destination-info{
+                            padding: 10px 0px;
+                            .destination-title{
+                                font-size: 25px;
+                                font-weight: bolder;
+                                color: $color-black-light;
+                                text-transform: capitalize;;
+                            }
+                            .destination-desc{
+                                color: $color-silver;
+                                font-size: 16px;
+                                font-style: italic;
+                                display: -webkit-box;
+                                overflow: hidden;
+                                -webkit-line-clamp: 4;
+                                -webkit-box-orient: vertical;
+                            }
+                        }
+                        .overlay{
+                            position: absolute;
+                            bottom: 220px; 
+                            left: 0px;
+                            .destination-overlay{
+                            
+                                .btn-overlay{}           
+                                img{
+                                    border-radius:  $border-r-p-50;
+                                    width: 60px;
+                                    height: 60px;
+                                    box-shadow: 1px 1px 6px 2px #fff,-1px -1px 6px 2px #fff;
+                                }                     
+                            }  
+                        }                  
+                    }               
+                    .matcard-action{
+                        border: $test-border;
+                        border-top: 1px solid $color-black;                 
+                        //width: 100%;
+                        padding-top: 10px;
+                        .col{
+                            border: $test-border;
+                        }
+                        .action-one{
+                            font-size: 16px;
+                            color: $color-orange-bright;
+                        }
+                        .action-link{
+                            text-align: right;
+                            .action-two{
+                                font-size: 16px;
+                                color: $color-black-light;
+                                
+                            }
+                        }            
+                    }   
+                }     
+            }           
+        }   
+    }
+}

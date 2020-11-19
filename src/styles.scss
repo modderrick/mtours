@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 //@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
-
+@import 'assets/scss/modules/_fonts.scss';
 @import '~@swimlane/ngx-datatable/index.css';
 @import '~@swimlane/ngx-datatable/themes/material.scss';
 @import '~@swimlane/ngx-datatable/themes/dark.scss';
@@ -13,6 +13,10 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/_breakpoints";
 
 @import '~@angular/material/theming';
 @include mat-core();
@@ -60,3 +64,4 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+

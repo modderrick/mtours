@@ -1,1 +1,63 @@
-<p>blog-article works!</p>
+<section class="main-content">
+    <div class="section-content">
+        <div class="section-header">
+            <div class="container">
+                <p class="title">Lorem ipsum dolor sit amet.</p>
+                <p class="date mb-4">{{date | date:'mediumDate'}} | uncategorized</p>
+                <div class="intro-desc">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates tempora facere eum incidunt beatae! Expedita cupiditate sequi quae labore esse? Dignissimos saepe quos laudantium laborum! Voluptatum accusamus officiis sint commodi.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto praesentium voluptatibus, maxime fugit a explicabo laudantium illum labore atque necessitatibus, hic deleniti, sequi mollitia sit repellendus ea? Architecto expedita esse aliquid natus voluptatum harum dicta ad eos, dolore nobis eius facilis nostrum. Facilis maiores eligendi sint magnam doloremque perspiciatis voluptatum vero totam molestias suscipit dolorum delectus iste officia illo laborum obcaecati, eum provident reiciendis asperiores quidem natus voluptas quo! Nihil beatae dolor, accusamus alias magni, quidem, dolorem perspiciatis quia error facere eligendi. Neque sed commodi beatae enim ratione ipsa a at maxime similique mollitia officia obcaecati, libero est consequatur! Nam!</p>
+                </div>
+            </div>
+        </div>
+        <div class="article-content pt-5">
+            <div class="container">
+                <div class="article-details">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi deserunt dolor temporibus iusto quod! Necessitatibus asperiores, earum molestiae, rerum illo corrupti natus excepturi blanditiis maiores dolore harum nemo saepe? Rerum magnam a at voluptatibus dolorum animi nam sint nihil, exercitationem nesciunt, dolor laborum laboriosam veniam est. Asperiores magnam ad sed inventore, facere voluptatum dolor, harum et doloremque nisi enim ex officia iusto nobis? Quisquam recusandae soluta consequuntur, ipsum excepturi autem? Officiis ducimus, facilis consequatur laboriosam vel necessitatibus sunt cupiditate? Tempore provident, ea modi consequatur dignissimos quam doloremque placeat, amet reiciendis commodi alias cum ipsum dolorum distinctio consectetur eligendi delectus maxime laudantium libero? Placeat hic consequatur, sit, a, repudiandae ea similique magni quisquam et debitis ab. Nam, doloremque provident tempore qui magnam sed dolorum illum ex reprehenderit in, quo deserunt quas molestiae optio incidunt facere repellendus consectetur itaque iusto et nemo. Quo cumque vitae minima, ducimus molestiae nemo itaque magni laboriosam deserunt pariatur veniam labore! Provident laboriosam accusantium velit sunt enim atque. Dolore officia reiciendis aliquid quidem rerum neque. Expedita, voluptatem odio iusto ex modi iste est at. Dignissimos in libero vero minus hic enim eum dicta culpa illum. Iste quidem reprehenderit tenetur provident illo repellendus, earum accusantium porro quo a.
+                </div>
+                <div class="recent-article mt-4">
+                    <div class="container">
+                        <div class="row mb-2 recent-article-header">
+                            <div class="col col-12 col-md-6 align-self-center mr-auto">
+                                <p class="title">Recent articles</p>
+                            </div>
+                            <div class="col col-3 col-md-1 d-none d-lg-block align-self-center">
+                                <button class="btn btn-outline rounded-circle prev-article"><i class="fas fa-arrow-left"></i></button>
+                            </div>
+                            <div class="col col-3 col-md-1 d-none d-lg-block align-self-center">
+                                <button class="btn btn-outline rounded-circle next-article"><i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recent-wrapper">
+                      
+                        <div  class="swiper-container" [swiper]="config0" >
+                            <div class="swiper-wrapper">                  
+                                
+                                <div class="swiper-slide" *ngFor="let item of recentArticleData" > 
+                                    <a href="javascript:void(0)" class="article-link" routerLink="/blog-article">
+                                        <mat-card class="article-card mb-2" >                       
+                                            <img  src="../../../assets/images/tour/tour_{{item.id}}.jpg" />  
+                                        </mat-card>  
+                                        <p class="date">{{date| date:'mediumDate'}} | UNCATEGORIZED</p>  
+                                        <p class="title mb-1">Pack wisely before travelling</p>
+                                        <p class="desc">
+                                            A wonderful serenity has taken possession of my 
+                                            entire soul, like these sweet mornings of spring 
+                                            which I enjoy with my whole heart.
+                                        </p>  
+                                    </a>       
+                                </div>
+                            </div>                        
+                        </div> 
+ 
+                    </div>
+
+                </div>
+               
+
+            </div>
+        </div>
+      
+    </div>
+    </section>

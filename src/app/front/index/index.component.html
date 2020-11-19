@@ -4,127 +4,154 @@
         <div  class="swiper-container main-slider slide-wrapper" [swiper]="config1" >
             <div class="swiper-wrapper">
                 <div class="swiper-slide" *ngFor="let slide of slidesData" >
-                    <img height="700px" width="100%" src="../../assets/images/tour/tour_{{slide.id}}.jpeg" />         
+                    <img src="../../assets/images/tour/tour_{{slide.id}}.jpeg" />         
                     <div class="slide-overlay">       
-                        <div class="slider-info">
-                            <div>                   
-                                <h1>Mt Rwenzori</h1>
-                                <p>The best tour center</p>   
-                                <div class="slider-buttons">
-                                    <button mat-raised-button color="accent" class="primary-btn" >Want a personal toure</button>
-                                    <button mat-stroked-button class="secondary-btn" >Choose a toure</button>
-                                </div> 
-                            </div>
-                            <div class="popular-destination-marker">
-                                <div>
-                                    <mat-icon>location_on</mat-icon>
+                        <div class="container  slider-info pl-md-3 pr-md-3">
+                            <div class="row info-title">
+                                <div class="col col-12 mb-2 mb-lg-0">                   
+                                    <p>Mt Rwenzori</p>
+                                    <p>The best tour center</p>  
                                 </div>
-                             
-                                <p>The most popular destination and the best this year - Uganda</p>    
-                            </div>                
+                            </div>
+                            <div class="row info-content mt-4">
+                                <div class="col col-12 col-md-6 slider-buttons mb-2 mb-lg-0">
+                                    <div class="row info-buttons">
+                                        <div class="col col-7 col-md-7 p-0 ">
+                                            <span class="text-center btn-block btn-primary rounded-lg pt-2 pb-2 pl-0 pr-0" >Want a personal tour</span>
+                                        </div>
+                                        <div class="col col-5 col-md-5 p-0 align-self-center">
+                                            <button class="btn btn-block btn-secondary rounded-pill pl-0 pr-0" >Choose a tour</button>
+                                        </div> 
+                                    </div>
+                                </div>     
+                                <div class="col col-12 col-md-5 offset-md-1 map-marker">
+                                    <div class="row p-0">
+                                        <div class="col col-2 p-0 justify-content-end">
+                                            <i class="fas fa-map-marker-alt"></i> 
+                                        </div>
+                                        <div class="col col-10 p-0 map-marker-desc">                                
+                                            The most popular destination and the best this year - Uganda
+                                        </div>   
+                                    </div>
+                                </div>                
+                            </div>
                         </div>            
                     </div>
                 </div>
             </div>
             
-            <div  class="swiper-container swiper-two" [swiper]="config2" >
+            <div  class="swiper-container swiper-two pl-1 pr-1" [swiper]="config2" >
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" *ngFor="let slide of tourData1" >     
-                       <div class="img-wrapper">
-                            <img height="600px" width="100%" src="../../assets/images/tour/tour_{{slide.id}}.jpeg" /> 
-                       </div>
-                        <div class="tour-type">
-                            <h2>Wedding tours</h2>
-                        </div>   
+                    <div class="swiper-slide" *ngFor="let slide of tourData1">
+                        <a class="tour-link" href="javascript:void(0)" routerLink="/tour">   
+                            <div class="container">  
+                                <div class="row img-wrapper">
+                                    <div class="col col-12 pt-3 pb-3">
+                                            <img class="rounded-circle mx-auto d-block"  src="../../assets/images/tour/tour_{{slide.id}}.jpeg" /> 
+                                    </div>
+                                    <div class="col-12 tour-type">
+                                        <p>Wedding tours</p>
+                                    </div>   
+                                </div>
+                            </div>
+                        </a>
                     </div> 
                 </div>           
-                <div class="swiper-button-prev prev-2" ></div>
-                <div class="swiper-button-next next-2" ></div>
+                <button class="btn btn-outline swiper-two-prev-nav d-none d-md-block rounded-circle" >
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <button class="btn btn-outline swiper-two-next-nav d-none d-md-block rounded-circle" >
+                    <i class="fas fa-arrow-right"></i>
+                </button>
             </div>                  
         </div>        
     </div>
 
-    <section class="popular-destinations">
-        <div class="section-header">
-            <div class="sub-header-1">
-                <h3>Popular</h3>
-                <h1>Most popular holiday destinations</h1>
+    <section class="popular-tours">
+        <div class="container">
+            <div class="row mx-auto mb-2 section-header dynamic-content-header">
+                <div class="col col-12 col-sm-5 pl-0 pr-0 mr-auto">
+                    <h6 class="header-title">Popular</h6>
+                    <h6 class="header-desc">Most popular holiday tours</h6>
+                </div>          
+                <div class="col col-6 col-sm-3 pl-0 pr-0 align-self-end">
+                    <a href="javascript:void(0)" routerLink="/tours" class="btn btn-outline rounded-pill pt-2 pb-2 btn-block">View all tours</a>
+                </div>
+                <div class="col col-3 col-sm-1  pb-0 align-self-end">
+                    <button class="btn btn-outline rounded-circle pt-2 pb-2 prev-3"><i class="fas fa-arrow-left"></i></button>
+                </div>
+                <div class="col col-3 col-sm-1 pb-0 align-self-end">
+                    <button class="btn btn-outline rounded-circle pt-2 pb-2 next-3"><i class="fas fa-arrow-right"></i></button>
+                </div>            
             </div>
-            <div class="spacer-2"></div>
-            <div class="sub-header-2">
-                <button mat-stroked-button color="white">View all tours</button>
-                <button mat-stroked-button class="prev-3" ><mat-icon>arrow_back</mat-icon></button>
-                <button mat-stroked-button class="next-3" ><mat-icon>arrow_forward</mat-icon></button>
-            </div>            
         </div>
         <div class="section-content">
-            <div  class="swiper-container" [swiper]="config3" >
+            <div class="swiper-container" [swiper]="config3" >
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" *ngFor="let slide of tourData2" >     
-                        <mat-card>                       
-                            <img height="400px" width="100%"  src="../../assets/images/tour/tour_{{slide.id}}.jpeg" />                           
-                        </mat-card>  
-                        <div class="card-overlay">
-                            <mat-chip-list>
-                                <mat-chip color="primary" class="discount-tag"> 20% off</mat-chip>
-                                <mat-chip color="accent" class="status-tag">New</mat-chip>
-                            </mat-chip-list> 
-                            <div class="spacer-3"></div>
-                            <div class="overlay-body">
-                                <div class="rating">
-                                    <ngb-rating [(rate)]="currentRate">
-                                        <ng-template let-fill="fill" let-index="index">
-                                            <span class="star" [class.filled]="fill === 100">&#9733;</span>
-                                          </ng-template>
-                                    </ngb-rating>
-                                    <span class="reviews">(2 Reviews)</span>
-                                </div>  
-                                <div class="overlay-title">
-                                    A toure of the highlands
-                                </div>  
-                                <div class="overlay-text">
-                                    6 excursions to the main cities of the country, 
-                                    admire the beautiful autum gardens
-                                </div>   
-                            </div>                           
-                            <div class="overlay-footer">  
-                                <fa-icon [icon]="faClock" size="3x"></fa-icon>            
-                                <span class="icon-text"> 7 days ago</span>
-                            </div>                
-                        </div>
+                    <div class="swiper-slide" *ngFor="let slide of tourData2" >   
+                        <a class="tour-link" href="javascript:void(0)" routerLink="/tour">                      
+                            <mat-card>                       
+                                <img src="../../assets/images/tour/tour_{{slide.id}}.jpeg" />    
+
+                                <div class="card-overlay">
+                                    <mat-chip-list>
+                                        <mat-chip color="primary" class="discount-tag"> 20% off</mat-chip>
+                                        <mat-chip color="accent" class="status-tag">New</mat-chip>
+                                    </mat-chip-list> 
+                                    <div class="container">
+                                        <div class="row overlay-body">  
+                                            <div class="col col-12 rating">
+                                                <ngb-rating [(rate)]="currentRate">
+                                                    <ng-template let-fill="fill" let-index="index">
+                                                        <span class="star" [class.filled]="fill === 100">&#9733;</span>
+                                                    </ng-template>
+                                                </ngb-rating>
+                                                <span class="reviews">(2 Reviews)</span>
+                                            </div>               
+                                            <div class="col col-12 overlay-title">
+                                                <span> A toure of the highlands</span>
+                                            </div>                               
+                                            <div class="col col-12 overlay-text">
+                                                6 excursions to the main cities of the country, 
+                                                admire the beautiful autum gardens,
+                                                10 excursions to the main cities of the country, 
+                                                admire the beautiful autum gardens
+                                            </div>  
+                                            <div class="col col-12 overlay-footer align-self-center">
+                                                <i class="far fa-clock fa-2x"></i>            
+                                                <span class="icon-text"> 7 days</span>
+                                            </div> 
+                                        </div>    
+                                    </div>                                     
+                                </div>                       
+                            </mat-card>    
+                        </a>
                     </div>                     
                 </div>             
             </div>  
         </div>
         <div class="section-footer">
-            <div class="image-icon">
-                <img src="../../assets/images/tour/tour_20.jpg"/>
-                <div class="image-icon-text">
-                    <h1>Any route</h1>
-                    <span>We will help you to make any route for travel</span>
-
-                </div>
-            </div>
-            <div class="image-icon">
-                <img src="../../assets/images/tour/tour_30.jpg"/>
-                <div class="image-icon-text">
-                    <h1>Your dream</h1>
-                    <span>Your dreams of an unforgettable journey can come true with us</span>
-
-                </div>
-            </div>
-            <div class="image-icon">
-                <img src="../../assets/images/tour/tour_40.jpg"/>
-                <div class="image-icon-text">
-                    <h1>Our guarantee</h1>
-                    <span>We guarantee you an unforgettable journey and a lot of impressions</span>
-
+            <div class="swiper-container" [swiper]="config6" >
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" *ngFor="let slide of tourMandate" > 
+                        <div class="container">
+                            <div class="row justify-content-center tour-mandate ">
+                                <div class="col col-6 mandate-img "> 
+                                    <img class="rounded-circle" src="../../assets/images/tour/tour_{{slide.id}}.jpg" /> 
+                                </div>
+                                <div class="col col-12 mandate-desc">
+                                    <p class="mandate-title">{{ slide.mandate }}</p>
+                                    <p class="mandate-txt">{{ slide.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
                 </div>
             </div>
         </div>        
     </section>
 
-    <mat-card class="search-tour">
+   <!-- <mat-card class="search-tour">
         <div class="section-header">
             <div class="sub-header-1">
                 <h3>search tour now</h3>
@@ -174,164 +201,215 @@
                 </form>
             </div>
         </div>
-    </mat-card>
+    </mat-card>-->
         
-
-    <section class="popular-locations">
-        <div class="section-header">
-            <div class="sub-header-1">
-                <h3>True now</h3>
-                <h1>Popular Destinations</h1>
+    <section class="popular-destinations">
+        <div class="container">
+            <div class="row mx-auto mb-2 section-header dynamic-content-header">
+                <div class="col col-12 col-sm-5 pb-0 pr-0 pl-0 align-self-end mr-auto">
+                    <h6 class="header-title">True now</h6>
+                    <h6 class="header-desc">Popular Destinations</h6>
+                </div>          
+                <div class="col col-6 col-sm-3 pb-1 align-self-end">
+                    <a href="javascript:void(0)" routerLink="/destinations" class="btn btn-outline rounded-pill pt-2 pb-2 btn-block">View all</a>
+                </div>
+                <div class="col col-3 col-sm-1 pb-1  align-self-end">
+                    <button class="btn btn-outline rounded-circle pt-2 pb-2 prev-4"><i class="fas fa-arrow-left"></i></button>
+                </div>
+                <div class="col col-3 col-sm-1 pb-1 align-self-end">
+                    <button class="btn btn-outline rounded-circle pt-2 pb-2 next-4"><i class="fas fa-arrow-right"></i></button>
+                </div>            
             </div>
-            <div class="spacer-2" ></div>
-            <div class="sub-header-2">
-                <button mat-stroked-button >View all destinations</button>
-                <button mat-stroked-button class="prev-4" ><mat-icon>arrow_back</mat-icon></button>
-                <button mat-stroked-button class="next-4" ><mat-icon>arrow_forward</mat-icon></button>
-            </div>            
         </div>
         <div class="section-content">
             <div  class="swiper-container" [swiper]="config4" >
-                <div class="swiper-wrapper">                  
-                    <mat-card class="swiper-slide" *ngFor="let slide of tourData3" >                       
-                        <img height="250px" width="100%"  src="../../assets/images/tour/tour_{{slide.id}}.jpeg" />  
-                        <mat-card-content>
-                            <h1>Kampala</h1>
-                            <p>What to experience a clear raising sun, then spot is tfor you since you wont miss
-                                even the a single light rays, watch as you enjoy the fun experience that comes packed
-                                with other stuffs directly from us
-                            </p>
-                        </mat-card-content>                         
-                        <mat-card-action>
-                            <div><span>15 tours</span></div>
-                            <div class="spacer-1"></div>
-                            <div> <a href="#">View all tours</a></div> 
-                        </mat-card-action>   
-                        <div class="circle-overlay">
-                            <img height="100px" width="100%"  src="../../assets/images/tour/tour_{{slide.id}}.jpeg" />  
-                        </div>                    
-                    </mat-card>                                        
-                </div>          
-               
+                <div class="swiper-wrapper">       
+                    <div class="swiper-slide" *ngFor="let slide of tourData3"> 
+  
+                            <mat-card class="destination-card">                       
+                                <img height="200px" width="100%"  src="../../assets/images/tour/tour_{{slide.id}}.jpeg" />  
+                                <mat-card-content>
+                                    <div class="row destination-info">
+                                        <div class="col col-12">
+                                            <p class="destination-title">Kampala</p>
+                                        </div>
+                                        <div class="col col-12 p-0">
+                                            <p class="destination-desc">
+                                                What to experience a clear raising sun, then spot is tfor you since you wont miss
+                                                even the a single light rays, watch as you enjoy the fun experience that comes packed
+                                                with other stuffs directly from us
+                                            </p>
+                                        </div>
+                                    </div> 
+                                    <div class="container overlay">     
+                                        <div class="row destination-overlay">
+                                            <div class="col col-5 mr-auto "> 
+                                                <img class="img-overlay"  src="../../assets/images/tour/tour_{{slide.id}}.jpeg" />  
+                                            </div>
+                                            <div class="col col-5 align-self-center">
+                                                <a class="btn-overlay btn btn-secondary btn-sm rounded-pill p-2"href="#">view details</a>
+                                            </div>
+                                        </div>   
+                                    </div>  
+                                    <div class="matcard-action row">
+                                        <div class="col col-5 pl-0 mr-auto align-self-center">
+                                            <span class="action-one">15 tours</span>
+                                        </div>
+                                        <div class="col col-6 pr-0 action-link align-self-center">
+                                            <a class="action-two" href="javascript:void(0)" routerLink="/tours">View all tours</a>
+                                        </div>
+                                    </div>                                           
+                                </mat-card-content>                                                                  
+                            </mat-card>
+                        
+                    </div>
+                </div>                        
             </div>  
-        </div>   
+        </div>  
     </section>
 
     <section class="top-destinations">
-        <div class="section-header">
-            <div class="sub-header-1">
-                <h3>Top destinations</h3>
-                <h1>Mugga tours</h1>
-            </div>           
-        </div>
-        <div class="section-header-2">
-            <div>
-                <p>
-                    Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus 
-                    varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet 
-                    rutrum faucibus dolor auctor
-                </p>
+        <div class="container">
+            <div class="section-header">     
+                <div class="row sub-header-1">
+                    <div class="col col-12">
+                        <h6 class="top-dest-title">Top destinations</h6>
+                        <h6 class="about-company">Mugga tours</h6>
+                    </div>
+                </div>
+
+                <div class="row sub-header-2">
+                    <div class="col col-12 mb-3 col-lg-6 pl-0 pr-0">
+                        <p>
+                            Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus 
+                            varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet 
+                            rutrum faucibus dolor auctor
+                        </p>
+                    </div>
+                    <div class="col col-12 col-lg-6 pl-0 pr-0">
+                        <p>
+                            Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus 
+                            varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet 
+                            rutrum faucibus dolor auctor
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div>
-                <p>
-                    Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus 
-                    varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet 
-                    rutrum faucibus dolor auctor
-                </p>
-            </div>
-        </div>
-        <div class="section-content">
-            <div  class="swiper-container" [swiper]="config5" >
-                <div class="swiper-wrapper">                  
-                    <mat-card class="swiper-slide" *ngFor="let slide of tourData4" >                       
-                        <img height="100px" width="100%"  src="../../assets/images/tour/tour_{{slide.id}}.jpg" />
-                        <div class="country-overlay">
-                            <div><h2>Uganda</h2></div>
+        
+            <div class="section-content">
+                <div  class="swiper-container" [swiper]="config5" >
+                    <div class="swiper-wrapper">                  
+                        <mat-card class="swiper-slide" *ngFor="let slide of tourData4" >                       
+                            <img src="../../assets/images/tour/tour_{{slide.id}}.jpg" />
+                            <div class="overlay">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col col-10 align-self-center">
+                                            <p>Uganda</p>  
+                                        </div>
+                                    </div>
+                                </div>                           
+                            </div>   
                             
-                        </div>                   
-                    </mat-card>                                        
-                </div>          
-            </div>  
-        </div>   
+                        </mat-card>                                        
+                    </div>          
+                </div>  
+            </div>   
+        </div>
     </section>
 
     <section class="tour-sales">
         <div class="sales-wrapper">
-            <div class="section-header">
-                <div class="sub-header-1">
-                    <h3>sale</h3>
-                    <h1>Discount <mat-chip class="discount-tag">20% off </mat-chip></h1>            
-                </div>           
+            <div class="container sales-content">
+                <div class="row">
+                    <div class="col">
+                        <p class="title">sale</p>
+                        <p class="sub-title">Discount <span class="text-center rounded-pill discount-tag">20% off</span></p>
+                    </div>            
+                </div>
+                <div class="row">
+                    <div class="col col-12 col-md-6 mb-2">
+                        <p class="slaes-desc">
+                            Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus 
+                            varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet 
+                            rutrum faucibus dolor auctor
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-12 col-md-4 col-lg-3 mb-3 align-self-center">
+                        <div class="btn-primary rounded-pill btn-block text-center pt-3 pb-3 pt-md-3 pb-md-3">See promotion tours</div>
+                    </div>
+                    <div class="col col-12 col-md-3 col-lg-2 align-self-center">
+                        <a class="btn btn-outline rounded-pill btn-block pt-3 pb-3 pt-md-2 pb-md-2">Choose tour</a>
+                    </div>                   
+                </div>              
             </div>
-            <div class="section-header-2">
-                <div>
-                    <p>
-                        Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus 
-                        varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet 
-                        rutrum faucibus dolor auctor
-                    </p>
-                </div>
-                <div class="slider-button">
-                    <button mat-raised-button class="primary-btn">See promotion tours</button>
-                    <button mat-stroked-button class="secondary-btn">Choose tour</button>
-                </div>
-            </div> 
         </div>
     </section>
-
 
     <section class="blog">
-        <div class="blog-overlay">
-            <div class="section-header">
-                <div class="sub-header-1">
-                    <h3>blog</h3>
-                    <h1>Travel articles</h1>
+        <div class="blog-wrapper">
+            <div class="container">
+                <div class="row mb-2">
+                    <div class="col col-8 mx-auto">
+                        <p class="title">blog</p>
+                        <p class="sub-title">Travel articles</p>
+                    </div>
                 </div>
-                <div class="spacer-2" ></div>
-                <div class="sub-header-2">
-                    Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus 
-                    varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum
-                    faucibus dolor auctor
-                </div>            
+                <div class="row mb-2">
+                    <div class="col col-12">
+                        <p class="blog-desc">
+                            Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus 
+                            varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum
+                            faucibus dolor auctor
+                        </p>
+                    </div>
+                </div>
+                <div class="row section-content">
+                    <div class="col col-12 col-md-6 mt-3">
+                        <a class="blog-link" href="javascript:void(0)" routerLink="/blog-article">
+                            <mat-card class="p-0 rounded-lg">
+                                <img class="rounded-lg" src="../../assets/images/tour/tour_1.jpeg" alt="">                    
+                            </mat-card >
+                            <div class="mt-2 article-info">
+                                <p class="article-date">{{date| date:'shortDate'}} | UNCATEGORIZED</p>
+                                <p class="article-title">Pack wisely before travelling</p>
+                                <div class="article-desc">
+                                    Please endovoure to have every thing in order before travelling, this 
+                                    article will help  and show you how to get a grip of thing s beofre settng
+                                    up for that memorable journey
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col col-12 col-md-6 mt-3">
+                        <a class="blog-link" href="javascript:void(0)" routerLink="/blog-article">
+                            <mat-card class="rounded-lg p-0">
+                                <img class="rounded-lg" src="../../assets/images/tour/tour_4.jpeg" alt="">
+                            </mat-card>
+                            <div class="mt-2 article-info">
+                                <p class="article-date">{{date| date:'shortDate'}} | UNCATEGORIZED</p>
+                                <p class="article-title">Pack wisely before travelling</p>
+                                <div class="article-desc">
+                                    Please endovoure to have every thing in order before travelling, this 
+                                    article will help  and show you how to get a grip of thing s beofre settng
+                                    up for that memorable journey
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row mt-4 justify-content-center">
+                    <div class="col col-7 col-md-4 col-lg-3 blog-btn">
+                        <a href="javascript:void(0)" routerLink="/blog"  class="mx-auto btn btn-outline btn-block rounded-pill pt-2 pb-2">
+                            View all articles
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="section-content">
-                <div class="blog-wrapper">
-                    <div class="blog-card">
-                        <mat-card>
-                            <img src="../../assets/images/tour/tour_1.jpeg" />
-                        </mat-card>
-                        <div class="blog-card-footer">
-                            <h4>{{date| date:'medium'}} | UNCATEGORIZED</h4>
-                            <h2>Pack wisely before travelling</h2>
-                            <div>
-                                Please endovoure to have every thing in order before travelling, this 
-                                article will help  and show you how to get a grip of thing s beofre settng
-                                up for that memorable journey
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-card">
-                        <mat-card>
-                            <img [src]="'../../assets/images/tour/tour_4.jpeg'" />
-                        </mat-card>
-                        <div class="blog-card-footer">
-                            <h4>{{date| date:'medium'}} | uNCATEGORIZED</h4>
-                            <h2>Pack wisely before travelling</h2>
-                            <div>
-                                Please endovoure to have every thing in order before travelling, this 
-                                article will help  and show you how to get a grip of thing s beofre settng
-                                up for that memorable journey
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="btn-wrapper">
-                    <button mat-raised-button class="secondary-btn">View all articles</button>
-                </div>          
-            </div>   
         </div>
-    </section>
-      
+    </section>    
 </div>
 
 

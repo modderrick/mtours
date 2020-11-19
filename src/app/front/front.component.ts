@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./front.component.scss']
 })
 export class FrontComponent implements OnInit {
+  mode = "over"
+  appTitle="Mugga Tours"
 
   constructor() { }
 

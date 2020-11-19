@@ -12,8 +12,7 @@ export class AboutComponent implements OnInit {
 	direction: 'horizontal',
 	spaceBetween:	10,
 	speed:	2000,
-	
-	slidesPerView: 2,
+	slidesPerView: 1,
 	keyboard: false,
 	mousewheel: false,
 	scrollbar: false,
@@ -29,14 +28,26 @@ export class AboutComponent implements OnInit {
 	freeModeMomentumRatio:	2,
 	watchOverflow: true,
 	grabCursor:	true,
-	slidesOffsetBefore:	10,
+	
 
 	
 	centeredSlides: true,
 	navigation: {
 		nextEl: '.next-1',
 		prevEl: '.prev-1'
-	  },
+	},
+	breakpoints: {
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 5,
+			slidesOffsetBefore:	10,
+		},
+		992:{
+			slidesPerView: 2,
+			spaceBetween: 30,
+			slidesOffsetBefore:	10,
+		}
+	}
   };
 
 
