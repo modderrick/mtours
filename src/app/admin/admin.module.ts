@@ -9,7 +9,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-import { DataTablesModule } from 'angular-datatables'
+import { DataTablesModule } from 'angular-datatables';
+import { SwiperModule,SWIPER_CONFIG,SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 
 import {A11yModule} from '@angular/cdk/a11y';
@@ -79,6 +80,9 @@ import { DestinationTableComponent } from './admin-schematics/destination-table/
 import { BookingComponent } from './components/booking/booking.component';
 import { BookingTableComponent } from './admin-schematics/booking-table/booking-table.component';
 import { ViewBookingComponent } from './components/view-booking/view-booking.component';
+import { NavigationComponent } from './admin-schematics/navigation/navigation.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { ContentHeaderComponent } from './admin-schematics/content-header/content-header.component';
 
 
 
@@ -102,7 +106,7 @@ import { ViewBookingComponent } from './components/view-booking/view-booking.com
 		AddDestinationComponent, 
 		DestinationFormComponent, 
 		TourTableComponent, 
-		DestinationTableComponent, BookingComponent, BookingTableComponent, ViewBookingComponent
+		DestinationTableComponent, BookingComponent, BookingTableComponent, ViewBookingComponent, NavigationComponent, ContentHeaderComponent
 	],
 	imports: [
 		CommonModule,
@@ -116,6 +120,7 @@ import { ViewBookingComponent } from './components/view-booking/view-booking.com
 		MDBBootstrapModule.forRoot(),
 		NgxDatatableModule,
 		DataTablesModule,
+		SwiperModule,
 
 		A11yModule,
 		ClipboardModule,
@@ -161,6 +166,7 @@ import { ViewBookingComponent } from './components/view-booking/view-booking.com
 		OverlayModule,
 		PortalModule,
 		ScrollingModule,
+		LayoutModule,
 	]
 })
 export class AdminModule { }

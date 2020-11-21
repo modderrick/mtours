@@ -1,4 +1,4 @@
-<section class="admin-main">
+<!--<section class="admin-main">
     <div class="admin-nav">
         <div class="menu-header">
             <img fxHide.lt-md
@@ -17,12 +17,12 @@
             <div class="spacer-2">  {{isMenuOpen ? 'open':'close'}}</div>
             <div class="profile">
                 <img class="profile-pic"  src="../../assets/profile/profile_2.jpg" />
-                <!-- This button triggers the overlay and is it's origin -->
+                <!-- This button triggers the overlay and is it's origin --
                 <button (click)="isOpen = !isOpen" type="button" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
                     {{isOpen ? "Close" : "Open"}}
                 </button>
                 
-                <!-- This template displays the overlay content and is connected to the button -->
+                <!-- This template displays the overlay content and is connected to the button --
                 <ng-template cdkConnectedOverlay
                     [cdkConnectedOverlayOrigin]="trigger"
                     [cdkConnectedOverlayOpen]="isOpen">
@@ -37,25 +37,21 @@
     </div>
     <section fxLayout="row" class="admin-content">
         <section 
-        
-           
-           
-            
             [ngClass.lt-sm]="{'side-menu-lt-sm':true,'side-menu':false}" 
             [ngClass.lt-md]="{'side-menu-lt-md':true,'side-menu':false}" 
             class="side-menu"
             >
             <div class="menu-items">
                 <cdk-tree [dataSource]="dataSource" [treeControl]="treeControl">
-                    <!-- This is the tree node template for leaf nodes -->
+                    <!-- This is the tree node template for leaf nodes --
                     <cdk-tree-node *cdkTreeNodeDef="let node" cdkTreeNodePadding
                         [style.display]="shouldRender(node) ? 'flex' : 'none'"
                         class="example-tree-node">
-                    <!-- use a disabled button to provide padding for tree leaf -->
+                    <!-- use a disabled button to provide padding for tree leaf --
                     <a routerLink="{{node.link}}" mat-icon-button> {{node.name}}</a>
                 
                     </cdk-tree-node>
-                    <!-- This is the tree node template for expandable nodes -->
+                    <!-- This is the tree node template for expandable nodes --
                     <cdk-tree-node *cdkTreeNodeDef="let node; when: hasChild"  cdkTreeNodePadding
                         [style.display]="shouldRender(node) ? 'flex' : 'none'"
                         class="example-tree-node">
@@ -77,5 +73,6 @@
             <router-outlet></router-outlet>
         </section>
     </section>
-</section>
+</section>-->
+<app-navigation></app-navigation>
 
